@@ -1,0 +1,23 @@
+Mehran Tajbakhsh, 1223980147
+
+Create a reflector program 
+
+install scapy() module:
+git clone https://github.com/secdev/scapy.git
+cd scapy
+sudo python3 setup.py install
+
+1. Read parameters from input as argument:
+   - interface
+   - victim-ip
+   - victim-ethernet
+   - reflector-ip
+   - reflector-ethernet
+
+2. call main()
+3. use sniff function from scapy module and call function call_back in every packet 
+4. in call_back function:
+   if ARP packet -> call sendARPResponse
+   if IP packet -> call sendIPResponse
+
+
