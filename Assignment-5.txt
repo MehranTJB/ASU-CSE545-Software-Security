@@ -1,6 +1,3 @@
-Yidi Wang
-1211247892
-
 level 1:
 The solution to this level is link attack.
 I use objdump -d to disassemble the binary and readelf -x to read the content of hex bytes. It uses opoen(), which is vulnerable to link attack. Thus, I create a link to .secret file and save it in home directory:
@@ -14,7 +11,8 @@ The solution to this level is a PATH and HOME attack plus link attack.
 I also use objdump and readelf to read the contents I need. I found a instersting string -asxml.tidy.execlp
 The function execlp seems hackable. Base on what I learned:
 execlp() use the shell PATH variable to locate applications
-Program 2 calls tidy() to check the xhtml parameter. Create a link to l33t in home directory and add home to $PATH. 
+Program 2 calls tidy() to check the xhtml parameter. Create a link to l33t in home directory and add home to $PATH. 
+
 	ln -s /usr/local/bin/l33t ~/tidy
 	export PATH="$HOME:$PATH"
 Run 2 and get a OK.Get myself to level3.
@@ -169,7 +167,8 @@ $ /usr/local/bin/l33t
 Succeed!
 
 level 10:
-Program 10 uses strncpy(), which is vulnerable to non-terminated string overflow attack. If I overflow mypwd, the eip of checkpwd() will be overwrote. 
+Program 10 uses strncpy(), which is vulnerable to non-terminated string overflow attack. If I overflow mypwd, the eip of checkpwd() will be overwrote. 
+
 0xffffd73a
 0xffffd73c
 
@@ -189,6 +188,3 @@ It works. Add 0x100 to this address to deal with address offset:
 ffffd73b/use/
 ./11 $(python -c "print 'aa'+'\xff\ff\d7\3b'[::-1]*8192") '\xff\ff\d7\3b'
 Done.
-
-level 12:
-No idea. Example on ppt doesn't work. 
