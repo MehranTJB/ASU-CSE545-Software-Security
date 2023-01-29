@@ -1,5 +1,3 @@
-Mehran Tajbakhsh, 1223980147
-
 Reflector traffic -  Which acts as a mirror, such that when an adversary is portscanning a network, 
 they will actually be port scanning themselves. When they launch an exploit at the reflector, 
 the attack will be reflected back at them. 
