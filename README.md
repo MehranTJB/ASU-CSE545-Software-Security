@@ -1,4 +1,4 @@
-# ASU-CSE545-SoftwareSecurity
+# ASU-CSE545-Software Security
 This course will provide students with an understanding of the theories, tools, and techniques to
 identify, exploit, and mitigate software security vulnerabilities in the network, binary, and web
 levels. Students will study, in-depth, vulnerability classes to understand how to protect software
