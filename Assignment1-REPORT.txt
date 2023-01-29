@@ -1,5 +1,3 @@
-Mehran Tajbakhsh, ID: 1223980147
-
 Level 0 > 1
 Lunch PuTTY and connect to bandit.labs.overthewire.org via SSH 
 login as bandti0/bandit0
